@@ -103,7 +103,7 @@ namespace :sidekiq do
     if su_user == role.user
       yield
     else
-      as su_user do
+      backend.as su_user do
         yield
       end
     end
